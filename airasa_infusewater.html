@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIRASA - Infused Water</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: url('https://images.unsplash.com/photo-1616401784845-1804d7aa8f6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+    header {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-radius: 0 0 20px 20px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #009688;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #333;
+    }
+    .hero-img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-bottom: 5px solid #009688;
+      border-radius: 20px;
+      margin-top: 20px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+    .product-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    .product-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .product-info {
+      padding: 30px;
+    }
+    .product-info h2 {
+      color: #009688;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .product-info p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .order-form {
+      background: #fefefe;
+      margin-top: 20px;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .order-form:hover {
+      transform: scale(1.02);
+    }
+    .order-form h3 {
+      margin-bottom: 15px;
+      color: #009688;
+      text-align: center;
+    }
+    .order-form label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    .order-form input, .order-form select, .order-form button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    .order-form button {
+      background: #009688;
+      color: #fff;
+      cursor: pointer;
+      border: none;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+    .order-form button:hover {
+      background: #00796b;
+    }
+    .order-result {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      background: #e0f7fa;
+      color: #004d40;
+      font-weight: bold;
+      display: none;
+      text-align: center;
+    }
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+      color: #555;
+      border-radius: 20px 20px 0 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AIRASA</h1>
+    <p>Segarkan Harimu dengan Infused Water Sehat & Alami</p>
+  </header>
+
+  <!-- Hero Image Segar -->
+  <img class="hero-img" src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Infused Water Segar">
+
+  <div class="container">
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1617196038435-3fbb6f99b9e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=60" alt="Infused Water">
+      <div class="product-info">
+        <h2>Infused Water AIRASA</h2>
+        <p>Nikmati kesegaran alami dengan infused water AIRASA. Dibuat dari buah segar pilihan, cocok untuk menemani aktivitasmu setiap hari. Rasakan manfaat sehatnya dengan varian rasa yang menyegarkan!</p>
+        <ul>
+          <li>🍊 Jeruk Segar</li>
+          <li>🍉 Semangka Manis</li>
+        </ul>
+      </div>
+    </div>
+
+    <form class="order-form" id="orderForm">
+      <h3>Pesan Sekarang</h3>
+      <label for="name">Nama Pemesan:</label>
+      <input type="text" id="name" placeholder="Masukkan nama Anda" required>
+
+      <label for="flavor">Pilih Varian:</label>
+      <select id="flavor" required>
+        <option value="">-- Pilih Varian --</option>
+        <option value="Jeruk">Jeruk Segar</option>
+        <option value="Semangka">Semangka Manis</option>
+      </select>
+
+      <button type="submit">Kirim Pesanan</button>
+    </form>
+
+    <div class="order-result" id="orderResult"></div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 AIRASA Infused Water. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("orderForm").addEventListener("submit", function(e){
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const flavor = document.getElementById("flavor").value;
+      const result = document.getElementById("orderResult");
+
+      if(name && flavor){
+        result.style.display = "block";
+        result.innerText = `Terima kasih ${name}! Pesanan varian ${flavor} Anda sudah kami terima.`;
+        
+        // Membuat link WhatsApp otomatis
+        const phone = "628953648629690"; // gunakan format internasional (62 untuk Indonesia)
+        const message = `Halo AIRASA! Saya ${name} ingin memesan varian ${flavor}.`;
+        const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+        // Buka WhatsApp di tab baru
+        window.open(whatsappURL, '_blank');
+
+        document.getElementById("orderForm").reset();
+      }
+    });
+  </script>
+</body>
+</html>
